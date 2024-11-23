@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+font-family:'Times New Roman', Times, serif;
+font-weight:bold;
+box-sizing:border-box;
+margin:0;
+padding:0;
+        }
+        ::placeholder{
+            color:black;
+            opacity: 0.2;
+            
+        }
+        .wrapper{
+            height:100%;
+            width:100%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction:column;
+            background-color: blanchedalmond;
+            transition: 0.8s all;
+        }
+        h1{
+            text-align:center;
+            margin-bottom:1.5%;
+            color:aliceblue;
+        }
+        .conatiner{
+            width:300px;
+        }
+        input{
+            padding:25px;
+            color:black;
+            font-size:1em;
+            cursor:pointer;
+            width:70px;
+            background-color:rgb(241, 242, 242);
+            border:none;
+            outline:none;
+            border-radius:5%;
+
+        }
+        .row{
+            margin-bottom:3px;
+        }
+        input[type="button"]:hover{
+            background-color:grey;
+            color:black;
+        }
+        button{
+            border:none;
+            background-color: black;
+            padding:8px;
+            color:white;
+            margin:2px;
+            cursor:pointer;
+            outline:none;
+            border-radius:5%;
+            font-weight: 100;
+            font-size:5%;
+        }
+        .clear-button{
+            width:75.1%;
+            background-color:brown;
+            color:white;
+
+        }
+        .result{
+            width:75.1%;
+
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1>calculator</h1>
+            <div class="row">
+                <input type="text" name="result" class="result" id="result" value="" placeholder="result" readonly>
+                <input type="button"  value="+" onclick="setscreenvalue('+')"> 
+                <input type="button" value="1" onclick="setscreenvalue('1')"> 
+                <input type="button" value="2" onclick="setscreenvalue('2')"> 
+                <input type="button" value="3" onclick="setscreenvalue('3')"> 
+                <input type="button" value="-" onclick="setscreenvalue('-')"> 
+            </div>
+            <div class="row">
+                <input type="button" value="4" onclick="setscreenvalue('4')"> 
+                <input type="button" value="5" onclick="setscreenvalue('5')"> 
+                <input type="button" value="6" onclick="setscreenvalue('6')"> 
+                <input type="button" value="*" onclick="setscreenvalue('*')"> 
+            </div>
+            <div class="row">
+                <input type="button" value="7" onclick="setscreenvalue('7')"> 
+                <input type="button" value="8" onclick="setscreenvalue('8')"> 
+                <input type="button" value="9" onclick="setscreenvalue('9')"> 
+                <input type="button" value="/" onclick="setscreenvalue('/')"> 
+            </div>
+            <div class="row">
+                <input type="button" value="%" onclick="setscreenvalue('%')"> 
+                <input type="button" value="0" onclick="setscreenvalue('0')"> 
+                <input type="button" value="."  class="dot" onclick="setscreenvalue('.')"> 
+                <input type="button" value="=" onclick="calculateresult()"> 
+            </div>
+            <div class="row">
+                <input type="button" value="clear" onclick="clearscreen()" id="clear" class="clear-button"> 
+
+               
+            </div>
+        </div>
+    </div>
+</body>
+</html>
